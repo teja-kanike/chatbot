@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Interface with Avatars</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="chat-container">
+
+    <!-- Header -->
+    <div class="message-header">
+        <div class="user-info">
+            <img src="https://i.pravatar.cc/40?img=1" alt="User Avatar" class="avatar">
+            <div>
+                <h3 class="username">John Doe</h3>
+                <span class="last-seen">Last seen: 5 mins ago</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Box -->
+    <div class="chat-box">
+        <div class="message-page" id="message-page"></div>
+        <div class="message-bottom">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* General Reset and Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Dark blue gradient background from the Register Form */
+    background: linear-gradient(135deg, #005aa7, #001e3c); 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* --- Content Wrapper and Card --- */
+.content-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content-card {
+    background-color: #fff; /* White background for readability */
+    color: #333;
+    width: 100%;
+    max-width: 900px; /* Wide card to hold full article content */
+    padding: 60px 80px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Header --- */
+.content-header {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.content-header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #4b0082; /* Using a deeper purple for high contrast */
+}
+
+/* --- Section Blocks --- */
+.section-block {
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.section-block h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #00bcd4; /* Teal color from the chatbot button/highlights */
+}
+
+.section-block p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* List Styles */
+.section-block ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+}
+
+.section-block ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Custom bullet point using the teal color */
+.section-block ul li::before {
+    content: '•';
+    color: #00bcd4;
+    font-weight: 800;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Conclusion and Button */
+.conclusion {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.summary {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #00bcd4; /* Teal button background */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #00a0b2;
+}

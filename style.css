@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    /* Define the overall area for the logo */
+    display: flex;
+    align-items: center;
+    height: 40px; /* Ensure the logo container has a defined height */
+}
+
+.logo img {
+    /* This is the key styling for the image itself */
+    height: 100%; /* Makes the image take up the full height of the .logo container (40px) */
+    width: auto; /* Ensures the image scales correctly without distortion */
+    object-fit: contain;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+nav ul li a.signup {
+  background-color: #fff;
+  color: #4a00e0;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background: #fff;
+  color: #4a00e0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+}
+
+.content {
+    margin-top: 30px ;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.text-section {
+  flex: 1;
+  padding: 100px;
+  margin-top: 40px;
+}
+
+.text-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.text-section p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.text-section button {
+    /* INCREASED SIZE */
+    padding: 15px 35px; /* Increased top/bottom padding (height) and left/right padding (width) */
+    font-size: 18px;    /* Slightly larger font makes the button look bigger overall */
+    /* END INCREASED SIZE */
+    
+    background-color: #0068e0;
+    color: #0c0607;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+    
+    /* CORRECTION: The property should be box-shadow, not box-sizing, and it needs a valid value. */
+    /* Since 10px is an invalid value for box-sizing, I've commented it out or corrected it. */
+    /* If you meant to add a shadow: */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+}
+
+.image-section {
+  flex: 1;
+  background: linear-gradient(to bottom right, #4a00e0, #8e2de2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.illustration {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-style: italic;
+}

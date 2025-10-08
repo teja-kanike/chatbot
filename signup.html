@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buddy Sign Up Form</title>
+<link rel="stylesheet" href="style1.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<h1 class="page-title">Register Form</h1>
+
+<main class="form-wrapper">
+    <div class="form-container">
+
+        <div class="illustration-panel">
+            <img src="img1.png" class="buddy-robot-img">
+        </div>
+
+        <div class="form-panel">
+            <div class="buddy-logo-header">
+                <img src="OIP.jpeg" alt="Buddy Icon" class="buddy-icon">
+            </div>
+
+            <h2>Welcome to Sign Up Buddy!</h2>
+
+            <form id="signup-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="btn-signup">Sign Up</button>
+            </form>
+
+            <p class="sign-in-link">Already have an account? <a href="signin.html">Sign In</a></p>
+
+        </div>
+    </div>
+</main>
+
+<script>
+// ----------- SIGNUP SCRIPT -----------
+const signupForm = document.getElementById("signup-form");
+
+signupForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (!name || !email || !password) return alert("Please fill all fields");
+
+    try {
+        const res = await fetch("/signup", {   // Make sure your server has /signup endpoint
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username: email, password, name })
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+            alert("Signup successful! You can now login.");
+            window.location.href = "signin.html";  // Redirect to login page
+        } else {
+            alert(data.error);
+        }
+    } catch (err) {
+        console.error(err);
+        alert("Error connecting to server");
+    }
+});
+</script>
+
+</body>
+</html>

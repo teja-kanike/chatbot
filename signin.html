@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buddy Sign In</title>
+<link rel="stylesheet" href="signin_styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<main class="form-wrapper">
+    <div class="form-container">
+        <div class="form-panel">
+            <div class="buddy-logo-header">
+                <img src="OIP.jpeg" alt="Buddy Icon" class="buddy-icon">
+            </div>
+
+            <h2>Welcome Back!</h2>
+            <p class="subtitle">Sign in to your Buddy account.</p>
+
+            <form id="signin-form">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id="username" placeholder="Enter your username/email" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn-signin">Sign In</button>
+            </form>
+
+            <p class="sign-up-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
